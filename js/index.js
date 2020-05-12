@@ -5,6 +5,11 @@ const logoBtn = document.querySelector('.main-title .logo'),
   clothingBtns = document.querySelectorAll('.main-title .nav .clothing-btn'),
   clothingList = Array.from(document.querySelectorAll('.main-view .clothing-list'))[0].children;
 
+// 로고 버튼 클릭시 새로고침 이벤트 발생
+function reload() {
+  location.reload();
+}
+
 // 선택된 버튼에 맞춰 옷이 조회되도록 하는 함수
 function showSlectedClothing(event) {
   const btn = event.target;
