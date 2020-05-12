@@ -1,0 +1,135 @@
+@import "reset.css";
+
+:root {
+  --bg-main-color: rgb(97, 97, 97);
+
+  --img-logo-width: 80px;
+  --img-btn-width: 40px;
+  --img-list-width: 30px;
+
+  --btn-blue: rgba(167, 205, 255, 0.767);
+  --btn-yellow: rgb(228, 228, 123);
+  --btn-pink: pink;
+  --btn-text-color: rgb(39, 39, 39);
+}
+
+* {
+  outline: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-main-color);
+}
+
+img {
+  width: var(--img-btn-width);
+}
+
+.deactivate {
+  display: none;
+}
+
+.main-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vw;
+}
+
+.main-title .logo {
+  width: var(--img-logo-width);
+}
+
+.main-title .logo:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+  color: rgb(255, 255, 255);
+}
+
+.main-title .logo:not(:hover) {
+  transition-duration: 0.5s;
+}
+
+.main-title .logo:active {
+  transform: scale(1.05);
+}
+
+.main-title .nav {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  padding: 5px 30px;
+  width: 80vw;
+}
+
+.main-title .nav .clothing-btn:hover {
+  cursor: pointer;
+  transform: rotate(5deg);
+  transition-duration: 0.5s;
+  opacity: 0.6;
+  color: rgb(255, 255, 255);
+}
+
+.main-title .nav .clothing-btn:not(:hover) {
+  transition-duration: 0.5s;
+}
+
+.main-title .nav .clothing-btn:active {
+  transform: rotate(5deg) scale(0.95);
+  
+}
+
+.main-title .nav .color-btn {
+  border: 1;
+  border-radius: 2px;
+  font-weight: 600;
+  width: 50px;
+  color: var(--btn-text-color);
+}
+
+.main-title .nav #blue {
+  background-color: var(--btn-blue);
+}
+
+.main-title .nav #yellow {
+  background-color: var(--btn-yellow);
+}
+
+.main-title .nav #pink {
+  background-color: var(--btn-pink);
+}
+
+.main-view {
+  margin-bottom: 20px;
+}
+
+.main-view .clothing-list li {
+  /* display: flex; */
+  margin-top: 10px;
+  padding: 5px 10px;
+  width: 80vw;
+  border-radius: 4px;
+  background-color: aliceblue
+}
+
+.main-view .clothing-list li:hover {
+  transform: scale(1.02);
+  transition-duration: 0.3s;
+}
+
+.main-view .clothing-list li:not(:hover) {
+  transition-duration: 0.3s;
+}
+
+.main-view .clothing-list li:active {
+  transform: scale(1);
+}
+
+.main-view .clothing-list li img {
+  width: var(--img-list-width);
+  margin-right: 10px;
+}
