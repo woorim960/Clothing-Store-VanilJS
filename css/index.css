@@ -28,10 +28,12 @@ img {
   width: var(--img-btn-width);
 }
 
+/* 리스트를 안보이게 하기 위한 클래스 속성 */
 .deactivate {
   display: none;
 }
 
+/* 메인 로고와 네비게이션 바 */
 .main-title {
   display: flex;
   flex-direction: column;
@@ -39,6 +41,7 @@ img {
   margin-top: 5vw;
 }
 
+/* 메인 로고 */
 .main-title .logo {
   width: var(--img-logo-width);
 }
@@ -58,6 +61,7 @@ img {
   transform: scale(1.05);
 }
 
+/* 메인 네비게이션 바 */
 .main-title .nav {
   display: flex;
   justify-content: space-evenly;
@@ -102,6 +106,8 @@ img {
 .main-title .nav #pink {
   background-color: var(--btn-pink);
 }
+
+/* 메인 뷰 */
 
 .main-view {
   margin-bottom: 20px;
