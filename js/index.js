@@ -6,8 +6,12 @@ const logoBtn = document.querySelector('.main-title .logo'),
   clothingList = Array.from(document.querySelectorAll('.main-view .clothing-list'))[0].children;
 
 // 로고 버튼 클릭시 새로고침 이벤트 발생
-function reload() {
-  location.reload();
+function showMainView() {
+  
+  // 모든 리스트 순회
+  for (let clothing of clothingList) {
+    clothing.classList.remove('deactivate');
+  }
 }
 
 // 선택된 버튼에 맞춰 옷이 조회되도록 하는 함수
@@ -31,11 +35,11 @@ function showSlectedClothing(event) {
 // 메인 함수
 function main() {
   // 로고 버튼 클릭시 새로고침 이벤트 발생 => 원래 classList.remove로 "deactive" 클래스를 지워주는 것으로 했는데 작동이 안해서 새로고침으로라도 했습니다...ㅠ
-  logoBtn.addEventListener('click', reload);
+  logoBtn.addEventListener('click', showMainView);
 
   // 옷 버튼 클릭시 선택된 옷들만 분류하여 조회하는 함수 실행
-  Array.from(clothingBtns).forEach(clothingBtn => {
-    addEventListener('click', showSlectedClothing);
+  clothingBtns.forEach(clothingBtn => {
+    clothingBtn.addEventListener('click', showSlectedClothing);
   });
 }
 
